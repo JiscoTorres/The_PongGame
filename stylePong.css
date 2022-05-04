@@ -1,0 +1,108 @@
+﻿
+#canvas { 
+    text-shadow: #231f25;
+   }
+   /* Navegação */
+   
+   nav {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       background-color: #010103af;
+       position: initial;
+   }
+   
+   nav > img {
+        display: flex;
+   
+   }
+   
+   nav ul{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       list-style: none;
+       padding: 0;
+       width: 100%;
+   
+   }
+   
+   
+   nav ul li {
+       text-align: center;
+       width: 100%;
+   }
+   
+   nav ul li img {
+       display: inline-block;
+       padding: 10px 0;
+       width: 50%; /* Para mudar o tamanho do Emoji*/
+   } /* Mexer aqui*/
+   
+   
+   
+   
+   body {
+       margin: 0;
+       padding: 0;
+       background: linear-gradient(rgb(3, 13, 59), rgb(23, 28, 73), #01101f);
+   }
+   
+   .container {
+       position: relative;
+       margin: 100px auto 0;
+       width: 800px;
+       height: 480px;
+       background: linear-gradient(rgb(187, 176, 228), rgb(253, 253, 255), rgb(86, 86, 90));
+       margin-bottom: 10%;
+       
+   }
+   
+   .container:before, .container:after {
+       content: '';
+       position: absolute;
+       left: -2px;
+       top: -2px;
+       background: linear-gradient(45deg, #24c1ff, #0000ff, #3b0952,#0577fa, #0084ff, #10042e, 
+           #0000ff, #81d1ff,#00d9ff, #214ee4);
+       background-size: 400%;
+       width: calc(100% + 4px);
+       height: calc(100% + 4px);
+       z-index: -1;
+       animation: steam 20s linear infinite;
+   }
+   
+   
+   @keyframes steam {
+       0% {
+           background-position: 0 0;
+       }
+       50% {
+           background-position: 400% 0;
+       }
+       100% {
+           background-position: 0 0;
+       }
+   }
+   
+   .container:after {
+       filter: blur(50px);
+   }
+   
+   
+   /*   NAVEGAÇÃO   */
+   @media screen and (min-width:768px){
+   
+       /*nav*/
+     
+       nav{
+         flex-direction: row;
+         justify-content: space-around;
+     
+       }
+     
+       nav ul{
+         flex-direction: row;
+         width: 70%;
+       }
+     }  
